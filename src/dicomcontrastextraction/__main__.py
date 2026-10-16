@@ -1,7 +1,7 @@
 import os
 import sys
 
-# In order to enable calling the command-line interface directly from the source tree, i.e. as python src/dicom2sphn, 
+# In order to enable calling the command-line interface directly from the source tree, i.e. as python src/dicomcontrastextraction, 
 # this hack could be placed:
 if not __package__:
     # Make CLI runnable from source tree with

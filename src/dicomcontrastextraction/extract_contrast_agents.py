@@ -10,14 +10,11 @@ import re
 import time
 from datetime import timedelta
 from enum import Enum
-
-from typing import Any, Protocol, runtime_checkable
+from typing import Protocol, runtime_checkable
 
 from .data_converter import DataConverter
 
-#
-#
-#
+
 @runtime_checkable
 class LoggerProtocol(Protocol):
     """Protocol for the logger to ensure it has the necessary methods."""
@@ -27,9 +24,7 @@ class LoggerProtocol(Protocol):
     def error(self, msg: str, *args, **kwargs) -> None: ...
     def critical(self, msg: str, *args, **kwargs) -> None: ...
 
-#
-#
-#
+
 class Context:
     logger: LoggerProtocol
     
