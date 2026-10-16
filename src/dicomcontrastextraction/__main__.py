@@ -11,9 +11,9 @@ if not __package__:
 
 
 # This file is the entry point for the package when run as a script. 
-# It imports the main function from the cli module and executes it. 
+# It imports the main function "test_extraction" and executes it. 
 # This allows users to run the package directly from the command line without needing to specify the module path.
-# python -m dicom2sphn
+# python -m dicomcontrastextraction
 if __name__ == "__main__":
     from dicomcontrastextraction.extract_contrast_agents import test_extraction
     test_extraction()
