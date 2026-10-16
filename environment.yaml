@@ -1,0 +1,23 @@
+name: .conda
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.14.3
+  - click
+  - dicomweb-client
+  - hatchling
+  - numpy
+  - pydicom
+  - pynetdicom
+  - rdflib
+  - pytest
+  - sqlite
+  - pydantic
+  - stringcase  
+  - pathvalidate
+  - pip
+  - pipx
+  - pip:
+    - pyorthanc
+prefix: .\.conda

@@ -1,0 +1,63 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dicomcontrastextraction"
+version = "0.1.0"
+authors = [
+  { name="Edwin ter Voert", email="e.g.w.ter.voert@gmail.com" },
+]
+description = "A small example package that can extract contrast agent names from DICOM string"
+readme = "README.md"
+requires-python = ">=3.14"
+license = "GPL-3.0-or-later"
+license-files = [
+  "LICEN[CS]E*",
+]
+classifiers = [
+  # How mature is this project? Common values are
+  #   3 - Alpha
+  #   4 - Beta
+  #   5 - Production/Stable
+  "Development Status :: 3 - Alpha",  
+
+  # Indicate who your project is intended for
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Image Processing",
+  "Topic :: Scientific/Engineering :: Medical Science Apps.",
+
+  # Specify the Python versions you support here.
+  "Programming Language :: Python :: 3.14",
+  "Operating System :: OS Independent",
+
+  # License information
+  "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+]
+keywords = [ "DICOM", "Contrast Agent", "Medical Imaging", "Python" ]
+dependencies = [
+  "click",
+  "pydicom",
+  "pynetdicom",
+  "dicomweb-client",
+  "pytest",
+  "numpy",
+  "rdflib",
+  "pydantic"
+]
+
+[project.scripts]
+dicomcontrastextraction = "dicomcontrastextraction.extract_contrast_agents:test_extraction"
+
+# This section is for pipx, which allows users to install and run the CLI tool globally without affecting their local Python environment.
+# pipx run . 
+[project.entry-points."pipx.run"]
+dicomcontrastextraction = "dicomcontrastextraction.extract_contrast_agents:test_extraction"
+
+[project.urls]
+Homepage = "https://github.com/tervoert/Project-DICOM-Contrast-Metadata-Extraction"
+Repository = "https://github.com/tervoert/Project-DICOM-Contrast-Metadata-Extraction.git"
+Issues = "https://github.com/tervoert/Project-DICOM-Contrast-Metadata-Extraction/issues"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
