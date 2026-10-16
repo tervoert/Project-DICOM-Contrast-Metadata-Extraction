@@ -8,7 +8,7 @@ version = "0.1.0"
 authors = [
   { name="Edwin ter Voert", email="e.g.w.ter.voert@gmail.com" },
 ]
-description = "A small example package that can extract contrast agent names from DICOM string"
+description = "A small example package that attempts to extract contrast agent name or active ingredient name and related concentration and dose information from free text from DICOM (0018,0010) ContrastBolusAgent tag"
 readme = "README.md"
 requires-python = ">=3.14"
 license = "GPL-3.0-or-later"
@@ -34,16 +34,8 @@ classifiers = [
   # License information
   "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
 ]
-keywords = [ "DICOM", "Contrast Agent", "Medical Imaging", "Python" ]
+keywords = [ "Contrast Agent name", "parsing", "free text", "DICOM", "Tag", "(0018,0010)", "ContrastBolusAgent", "Medical Imaging", "Metadata", "Imaging Data", "Python", "Ontology", "International Standards", "SNOMED CT" ]
 dependencies = [
-  "click",
-  "pydicom",
-  "pynetdicom",
-  "dicomweb-client",
-  "pytest",
-  "numpy",
-  "rdflib",
-  "pydantic"
 ]
 
 [project.scripts]

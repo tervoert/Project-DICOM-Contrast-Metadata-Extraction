@@ -1,7 +1,6 @@
 """
 data_converter.py:
-    Part of the example dicom2sphn package.
-    It contains the DataConverter class, which handles data conversion.
+    It contains the DataConverter class, which handles data conversion and mapping.
 """
 
 from typing import ClassVar, ReadOnly
